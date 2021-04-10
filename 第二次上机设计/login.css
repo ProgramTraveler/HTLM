@@ -8,3 +8,8 @@
     width: 100%;
     display: none;
 }
+#load_div{
+    position: absolute;
+    width: 50;
+    display: none;
+}

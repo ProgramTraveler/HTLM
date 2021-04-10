@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="">
+ 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+        var arr = [ {   
+            username:'Tina',
+            login_date:'2020-09-20 19:30:00'
+        },
+        {   
+            username:'Tom',
+            login_date:'2020-09-28 14:08:20'
+        },
+        {
+            username:'Jack',
+            login_date:'2020-10-10 17:50:26'
+        }];
+        //表头
+        var tablehead =["username", "login_date"];
+        //初始化
+        function init() {
+
+            var body = document.body;
+
+            var container = document.createElement("div");
+
+            body.appendChild(container);
+
+			return container;
+ 
+        }
+ 
+        //创建表格
+        function inittable(container) {
+            var table = document.createElement("table");
+
+            container.appendChild(table);
+    
+            var tr_head = document.createElement("tr");
+       
+            table.appendChild(tr_head);
+
+            for (var i = 0; i < tablehead.length; i++) {
+         
+                var th = document.createElement("th");
+      
+                th.setAttribute("class", "text-center");
+             
+                th.innerHTML = tablehead[i];
+              
+                tr_head.appendChild(th);
+            }
+            //使用for循环将对象加入到table中去
+            for (var k = 0; k < arr.length; k++) {
+
+                var tr = document.createElement("tr");
+
+                table.appendChild(tr);
+
+                for (var j = 0; j < tablehead.length; j++) {
+  
+                    var td = document.createElement("td");
+ 
+                    td.setAttribute("class", "text-center");
+ 
+                    td.innerHTML = arr[k][tablehead[j]];
+                    tr.appendChild(td);
+                }
+                
+            }
+        }
+        window.onload = function() {
+           var table=init();
+            inittable(table);
+        }
+    </script>
+</head>
+ 
+<body>
+ 
+</body>
+ 
+</html>

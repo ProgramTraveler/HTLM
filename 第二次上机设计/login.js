@@ -7,6 +7,7 @@ function blockornone(id){
       //显示注册，隐藏登录
         document.getElementById(id).style.display='block';
         document.getElementById("login_div").style.display='none';
+        
         document.getElementById("t_reg").style.color='#1ba71b';
         document.getElementById("t_log").style.color='gray';
     }
@@ -14,8 +15,8 @@ function blockornone(id){
         //显示登录，隐藏注册
         document.getElementById(id).style.display='block';
         document.getElementById("regedit_div").style.display='none';
+        
         document.getElementById("t_reg").style.color='gray';
         document.getElementById("t_log").style.color='#1ba71b';
     }
-    //my.html里面的内容
-  }
+}
