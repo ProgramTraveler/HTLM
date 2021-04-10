@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第二次上机设计</title>
+    <script type="text/javascript" src = "login.js" ></script>
+    <script type="text/javascript" src = "vaild.js"></script>
+    <link href = "login.css" rel = "stylesheet" style type = "text/css">
+    </style>
+</head>
+<body>
+     
+    <!-- logo -->
+    <!--<div class="row">
+        <img src="../image/logo.png" class="mylogo" />
+    </div>-->
+
+    <!-- logo -->
+    <!--注册、登录  -->
+    <form role="form">
+        <table class="table">
+            <div class="row">
+                <div class="col-xs-6" >
+                    <h1 onclick="blockornone('regedit_div')" id="t_reg">注册<h1>
+                    </div>
+               <div class="col-xs-6" >
+                 <h1 onclick="blockornone('login_div')"  id="t_log">登录</h1>
+               </div>
+            </div>
+            <tbody id="regedit_div">
+                <tr>
+                    <td>用户名</td>
+                    <td><input type="text" id="pt" placeholder="输入用户名" name="username" /></td>
+                </tr>
+                <tr>
+                    <td>输入密码</td>
+                    <td><input type="password" id="pasF" name="password" /></td>
+                </tr>
+                <tr>
+                    <td>再次输入密码</td>
+                    <td><input type="password" id="pasS" name="gpassword" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" id = "btn" value="注册" /></td>
+                </tr>
+            </tbody>
+            <tbody id="login_div">
+                <tr>
+                    <td>用户名</td>
+                    <td><input type="text" placeholder="输入用户名" name="username" /></td>
+                </tr>
+                <tr>
+                    <td>密码</td>
+                    <td><input type="password" name="password" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="登录" /></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    <!--请输入QQ号：<input type="text" name="" id="pt" value="" placeholder="输入QQ号"/><button type="button" id="btn">检测</button>-->
+</body>
+</html>

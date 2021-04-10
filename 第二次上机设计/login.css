@@ -1,0 +1,10 @@
+#login_div{
+    position: absolute;
+    width: 100%;
+    display: none;
+}
+#regedit_div{
+    position: absolute;
+    width: 100%;
+    display: none;
+}
