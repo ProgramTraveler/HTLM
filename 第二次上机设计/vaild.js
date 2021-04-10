@@ -12,6 +12,9 @@ window.onload = function(){
         if(value == '' || value == ' '){
             alert('用户名不能为空');
             black;
+        }else if(valueF == '' || valueF == ' ') {
+            alert('密码不能为空');
+            black;
         }
         // 输入的是不是数字
         else if(isNaN(value)){
@@ -34,8 +37,10 @@ window.onload = function(){
             black;
         }else if(valueF != valueS){
             alert('输入的两个密码不一致');
+            black;
         }else{
             alert('注册成功');
+            black;
         }
     }
 }
