@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第三次上机设计</title>
+    <script type="text/javascript" src = "login.js"></script>
+    <script type="text/javascript" src = "vaild.js"></script>
+    <link href = "login.css" rel = "stylesheet" style type = "text/css">
+</head>
+<body>
+    <!-- logo -->
+    <!--注册、登录  -->
+    <form role="form">
+        <table class="table">
+            <div>
+                <div>
+                    <h1 onclick="blockornone('regedit_div')" id="t_reg">注册</h1>    
+                </div>
+               <div>
+                 <h1 onclick="blockornone('login_div')"  id="t_log">登录</h1>
+               </div>
+            </div>
+            <tbody id="regedit_div">
+                <tr>
+                    <td>用户名</td>
+                    <td><input type="text" id="pt" placeholder="输入用户名" name="username" /></td>
+                </tr>
+                <tr>
+                    <td>输入密码</td>
+                    <td><input type="password" id="pasF" name="password"/></td>
+                </tr>
+                <tr>
+                    <td>再次输入密码</td>
+                    <td><input type="password" id="pasS" name="gpassword"/></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" id = "btn" value="注册"/></td>
+                </tr>
+            </tbody>
+            <tbody id="login_div">
+                <tr>
+                    <td>用户名</td>
+                    <td><input type="text" placeholder="输入用户名" name="username"/></td>
+                </tr>
+                <tr>
+                    <td>密码</td>
+                    <td><input type="password" name="password" /></td>
+                </tr>
+                <tr>
+                    <td colspan="1"><input type="button" value="登录" onclick="location.href='TableDate.html'"></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>

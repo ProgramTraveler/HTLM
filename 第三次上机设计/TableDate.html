@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TableData</Table></title>
+</head>
+<body>
+    <input type="button" value="删除全部" id="dqb"/><br/>
+    姓名：<input type="text" id="name"/><br/>
+    性别：<select id="sex">
+            <option value ="男">男</option>
+            <option value ="女">女</option>
+        </select><br />
+    年龄：<input type="text" id="age"/>
+    <input type="button" value="添加" id = "add">
+    <input type="button" value="确认添加" class="truexiugai" style="display: none;"/>
+    <table border="3px">
+        <tr>
+            <td>ID</td>
+            <td>姓名</td>
+            <td>性别</td>
+            <td>年龄</td>
+            <td>操作</td>
+        </tr>
+    </table>
+</body>
+
+<!--引入百度CDN，不然无法调用JavaQuery库，你也可以使用其他的CDN-->
+
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script type="text/javascript">
+    var i=1;
+    $(function(){
+            $("#add").click(function(){
+                //获得用户的姓名
+                var name=$("#name").val();
+                //获得用户的年龄
+                var age=$("#age").val();
+                //获得用户性别
+                var sex=$("option").val();
+
+                $("<tr>").append($("<td>").text(i++))
+                .append($("<td>").text(name))
+                .append($("<td>").text(sex))
+                .append($("<td>").text(age))
+                .append($("<td>").append($("<button>").text("删除")).append($("<a href='#' class='bj'>").text("编辑")))
+                .appendTo($("table"));       
+                    
+            $("button").click(function(){
+                $(this).parent().parent().remove();
+            });            
+            //全部删除                
+            $("#dqb").click(function(){
+                $("table>tbody>tr:gt(0)").remove();
+            });
+            
+            $(".bj").click(function(){
+
+                $("#add").show();
+        
+                var name =$(this).parent().siblings("td:nth-child(2)").text();
+                var sex = $(this).parent().siblings("td:nth-child(3)").text();
+                var age = $(this).parent().siblings("td:nth-child(4)").text();
+                $("#name").val(name);
+                $("#sex").val(sex);
+                $("#add").hide();
+                $(".truexiugai").show();
+                
+                var that=$(this);
+
+                //点击确认修改时
+                $(".truexiugai").on("click",function(){
+                    // 获取信息
+                    var name=$("#name").val();
+                    var sex=$("#sex").val();
+                    var age=$("#age").val();
+                    that.parent().siblings("td:nth-child(2)").text(name);
+                    that.parent().siblings("td:nth-child(3)").text(sex);
+                    that.parent().siblings("td:nth-child(4)").text(age);
+                    $("#add").show();
+                    $(".truexiugai").hide();
+                }); 
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
