@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="dialogBox.css" style type="text/css" rel ="stylesheet">
+    <script src="dialogBox.js" style type="text/javascript"></script>
     <title>TableData</Table></title>
+
 </head>
+
 <body>
-    <input type="button" value="删除全部" id="dqb"/><br/>
+    <input type="button" value="删除全部" onclick="ShowMod();"/><br/>
     姓名：<input type="text" id="name"/><br/>
     性别：<select id="sex">
             <option value ="男">男</option>
@@ -25,7 +29,19 @@
             <td>操作</td>
         </tr>
     </table>
-</body>
+
+    <!--遮罩层开始-->
+    <div id = "id1" class = "shade hide">
+    </div>
+    <!--遮罩层结束-->
+
+    <!--弹出窗开始-->
+    <div id = "id2" class = "mode hide">
+        <p><h3>确认全部删除全部信息？</h3></p>
+        <p><h4><input type="button" value="确定" id = "dqb"></h4></p>
+        <p><h4><input type="button" value="取消" onclick="HideMod();"></h4></p>
+    </div>
+    <!--弹出窗结束-->
 
 <!--引入百度CDN，不然无法调用JavaQuery库，你也可以使用其他的CDN-->
 
@@ -51,9 +67,12 @@
                     
             $("button").click(function(){
                 $(this).parent().parent().remove();
-            });            
+            });
+
             //全部删除                
             $("#dqb").click(function(){
+                document.getElementById('id1').classList.add('hide');
+                document.getElementById('id2').classList.add('hide');
                 $("table>tbody>tr:gt(0)").remove();
             });
             
@@ -68,7 +87,7 @@
                 $("#sex").val(sex);
                 $("#add").hide();
                 $(".truexiugai").show();
-                
+
                 var that=$(this);
 
                 //点击确认修改时
