@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+<div class="header">
+    <span>欢迎你</span><span class="name"> <%=username%></span><!--<span class="newpage">新建随笔</span>-->
+</div>
+<div class="list"></div>
+<div class="action ">
+    <label>标题: </label>
+    <input type="text" name="title" class="title"/>
+    <label>简介: </label>
+    <input type="text" name="smalltext" class="smalltext"/>
+    <input type="submit" value="提交" class="page_btn sub"/>
+</div>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+    $('.page_btn').on('click',function(){
+        var title = $('.title').val();
+        var smalltext = $('.smalltext').val();
+        $.ajax({
+            type : "post",
+            async: false,
+            url  : '/data',
+            data:{ title: title, smalltext: smalltext },
+            success : function(response){
+                $(response).appendTo($('.list'));
+            },
+            error: function(XMLHttpRequest, textStatus, errorThrown) {
+                //alert("error"); console.log(XMLHttpRequest);
+            }
+        });
+    });
+</script>
+</body>
+</html>

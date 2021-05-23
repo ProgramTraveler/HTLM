@@ -1,0 +1,113 @@
+@charset "utf-8";
+/* CSS Document */
+body{margin:0 auto;padding:0;font-family:"微软雅黑","Helvetica Neue",Helvetica,STHeiTi,sans-serif;}
+textarea{resize:none;}
+iframe,img{border:0;}
+ol,ul{list-style:none;}
+video{display:none;}
+input,select,textarea{outline:0;-webkit-user-modify:read-write-plaintext-only;}
+input{-webkit-appearance:none;}
+a{text-decoration:none;color: #000;}
+.wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -250px;
+    margin-top: -250px;
+    width: 500px;
+    text-align: center;
+}
+.wrapper .log{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    padding: 10px;
+    border: 1px solid #2e63f0;
+    margin: 0 auto;
+}
+.wrapper .log img{
+    border-radius: 50%;
+    border: 1px solid #5a8df0;
+}
+.wrapper form{
+    text-align: left;
+}
+.wrapper h1{
+    color: #5F5F5F;
+    background: #f3f3f3;
+    padding-left: 10%;
+    height: 50px;
+    line-height: 50px;
+}
+.wrapper label{
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    font-size: 20px;
+    margin: 10px 0px;
+    color: #6F6F6F;
+}
+.wrapper input[name=username],.wrapper input[name=password]{
+    border-top: 1px solid #7c7c7c;
+    border-right: 1px solid #c3c3c3;
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #c3c3c3;
+    background: #fff;
+    height: 30px;
+    margin-bottom: 10px;
+    width: 100%;
+    font-size: 20px;
+}
+input[name=title],input[name=smalltext]{
+    border-top: 1px solid #7c7c7c;
+    border-right: 1px solid #c3c3c3;
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #c3c3c3;
+    background: #fff;
+    height: 30px;
+    margin-bottom: 10px;
+    width: 100%;
+    font-size: 20px;
+}
+.sub{
+    height: 30px;
+    background-color: #fff;
+    width: 200px;
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
+}
+.header{
+    height: 50px;
+    line-height: 50px;
+    padding-left: 10%;
+    background: #e0e0e0;
+}
+.header .name,.header .homereg{
+    float: right;
+    margin-right: 50px;
+}
+.header .homereg a{
+    margin-left: 10px;
+}
+
+.newpage{
+    cursor: pointer;
+    float: right;
+    margin-right: 50px;
+}
+.action,.list{
+    width: 80%;
+    margin: 0 auto;
+}
+.action label {
+    font-size: 20px;
+    margin: 10px 0px;
+    display: block;
+}
+.page_title{
+    font-size: 25px;
+}
+.page_smalltext{
+    font-size: 20px;
+}

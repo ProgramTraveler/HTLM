@@ -5,15 +5,15 @@
      left: 0;
      right: 0;
      bottom: 0;
-     background-color:gray;
+     background-color:black;
      opacity: 0.5;
      z-index: 9;
  }
  /*对话框*/
  .mode{
-     width: 500px;
-     height: 400px;
-     background-color: darkgray;
+     width: 200px;
+     height: 150px;
+     background-color: whitesmoke;
      position: fixed;
      left: 50%;
      top: 50%;
