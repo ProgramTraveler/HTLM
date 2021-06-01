@@ -22,4 +22,3 @@ springboot + mybatis + thymeleaf + BootStrap + Es + fastDFS + redis
   - 优先从缓存中取值
   - 取不到值时初始化缓存
   - 数据变更时,清除去缓存
-。。。。
